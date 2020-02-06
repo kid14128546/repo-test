@@ -12,9 +12,6 @@ File Encoding         : 65001
 
 Date: 2018-02-05 11:25:15
 */
-CREATE DATABASE `vhr` DEFAULT CHARACTER SET utf8;
-
-USE `vhr`;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -95,7 +92,7 @@ INSERT INTO `department` VALUES ('92', '运维部', '5', '.1.4.5.92', '1', '0');
 DROP TABLE IF EXISTS `employee`;
 CREATE TABLE `employee` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '员工编号',
-  `name` varchar(10) DEFAULT NULL COMMENT '员工姓名',
+  `name` varchar(20) DEFAULT NULL COMMENT '员工姓名',
   `gender` char(4) DEFAULT NULL COMMENT '性别',
   `birthday` date DEFAULT NULL COMMENT '出生日期',
   `idCard` char(18) DEFAULT NULL COMMENT '身份证号',
